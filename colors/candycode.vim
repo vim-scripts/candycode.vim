@@ -6,6 +6,9 @@ set background=dark
 highlight clear
 let g:colors_name="candycode"
 
+let save_cpo = &cpo
+set cpo&vim
+
 " basic highlight groups (:help highlight-groups) {{{
 
 " text {{{
@@ -165,5 +168,7 @@ hi Todo         guifg=#ffffff       guibg=#ee7700       gui=bold
             \   ctermfg=black       ctermbg=yellow      cterm=bold
 
 " }}}
+
+let &cpo = save_cpo
 
 " vim: fdm=marker fdl=0
